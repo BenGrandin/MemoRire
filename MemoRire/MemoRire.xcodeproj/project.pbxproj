@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E994450236056CC00C42C43 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */; };
+		6E9944542360735000C42C43 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9944532360735000C42C43 /* myCell.swift */; };
 		DB3BEB6D235F4A5000A755F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEB6C235F4A5000A755F8 /* AppDelegate.swift */; };
 		DB3BEB6F235F4A5000A755F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEB6E235F4A5000A755F8 /* SceneDelegate.swift */; };
 		DB3BEB71235F4A5000A755F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEB70235F4A5000A755F8 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
+		6E9944532360735000C42C43 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myCell.swift; path = ../../myCell.swift; sourceTree = "<group>"; };
 		DB3BEB69235F4A5000A755F8 /* MemoRire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoRire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3BEB6C235F4A5000A755F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3BEB6E235F4A5000A755F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E99444D2360562000C42C43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Controllers/MemoRire/Controllers/Views;
+			sourceTree = "<group>";
+		};
 		DB3BEB60235F4A5000A755F8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		DB3BEB6B235F4A5000A755F8 /* MemoRire */ = {
 			isa = PBXGroup;
 			children = (
+				6E99444D2360562000C42C43 /* Views */,
 				DB3BEB9E235F4A6E00A755F8 /* Controllers */,
 				DB3BEB9C235F4A5E00A755F8 /* Models */,
 				DB3BEB6C235F4A5000A755F8 /* AppDelegate.swift */,
@@ -116,7 +129,6 @@
 				DB3BEB70235F4A5000A755F8 /* ViewController.swift */,
 				DB3BEB72235F4A5000A755F8 /* Main.storyboard */,
 				DB3BEB75235F4A5300A755F8 /* Assets.xcassets */,
-				DB3BEBAA235F4B0500A755F8 /* Cards */,
 				DB3BEBA9235F4AFC00A755F8 /* Ohters */,
 				DB3BEB77235F4A5300A755F8 /* LaunchScreen.storyboard */,
 				DB3BEB7A235F4A5300A755F8 /* Info.plist */,
@@ -165,6 +177,8 @@
 		DB3BEB9E235F4A6E00A755F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E9944532360735000C42C43 /* myCell.swift */,
+				6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,13 +188,6 @@
 			children = (
 			);
 			path = Ohters;
-			sourceTree = "<group>";
-		};
-		DB3BEBAA235F4B0500A755F8 /* Cards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +324,11 @@
 				DB3BEBA0235F4A8200A755F8 /* Title.swift in Sources */,
 				DB3BEB71235F4A5000A755F8 /* ViewController.swift in Sources */,
 				DB3BEBA6235F4ACF00A755F8 /* Game.swift in Sources */,
+				6E994450236056CC00C42C43 /* GameCollectionViewController.swift in Sources */,
 				DB3BEBA4235F4AA200A755F8 /* Highscore.swift in Sources */,
 				DB3BEB6D235F4A5000A755F8 /* AppDelegate.swift in Sources */,
 				DB3BEBA2235F4A9100A755F8 /* Player.swift in Sources */,
+				6E9944542360735000C42C43 /* myCell.swift in Sources */,
 				DB3BEB6F235F4A5000A755F8 /* SceneDelegate.swift in Sources */,
 				DB3BEBA8235F4ADA00A755F8 /* Card.swift in Sources */,
 			);
