@@ -20,6 +20,8 @@
 		DB3BEBA4235F4AA200A755F8 /* Highscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEBA3235F4AA200A755F8 /* Highscore.swift */; };
 		DB3BEBA6235F4ACF00A755F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEBA5235F4ACF00A755F8 /* Game.swift */; };
 		DB3BEBA8235F4ADA00A755F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEBA7235F4ADA00A755F8 /* Card.swift */; };
+		DB3BEBAE235F57A300A755F8 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEBAD235F57A300A755F8 /* Variables.swift */; };
+		DB46DDC42360488A00F1E05D /* Bouton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46DDC32360488A00F1E05D /* Bouton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		DB3BEBA3235F4AA200A755F8 /* Highscore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highscore.swift; sourceTree = "<group>"; };
 		DB3BEBA5235F4ACF00A755F8 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DB3BEBA7235F4ADA00A755F8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DB3BEBAD235F57A300A755F8 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		DB46DDC32360488A00F1E05D /* Bouton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bouton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		DB3BEB6B235F4A5000A755F8 /* MemoRire */ = {
 			isa = PBXGroup;
 			children = (
+				DB3BEBAC235F575100A755F8 /* View */,
+				DB3BEBAB235F571900A755F8 /* Utils */,
 				DB3BEB9E235F4A6E00A755F8 /* Controllers */,
 				DB3BEB9C235F4A5E00A755F8 /* Models */,
 				DB3BEB6C235F4A5000A755F8 /* AppDelegate.swift */,
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DB3BEB9F235F4A8200A755F8 /* Title.swift */,
+				DB46DDC32360488A00F1E05D /* Bouton.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -181,6 +188,21 @@
 			children = (
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		DB3BEBAB235F571900A755F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB3BEBAD235F57A300A755F8 /* Variables.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB3BEBAC235F575100A755F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +338,8 @@
 			files = (
 				DB3BEBA0235F4A8200A755F8 /* Title.swift in Sources */,
 				DB3BEB71235F4A5000A755F8 /* ViewController.swift in Sources */,
+				DB46DDC42360488A00F1E05D /* Bouton.swift in Sources */,
+				DB3BEBAE235F57A300A755F8 /* Variables.swift in Sources */,
 				DB3BEBA6235F4ACF00A755F8 /* Game.swift in Sources */,
 				DB3BEBA4235F4AA200A755F8 /* Highscore.swift in Sources */,
 				DB3BEB6D235F4A5000A755F8 /* AppDelegate.swift in Sources */,

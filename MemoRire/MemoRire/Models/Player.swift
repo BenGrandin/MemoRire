@@ -8,6 +8,12 @@
 
 import UIKit
 
-class Player: NSObject {
 
+class Player: NSObject {
+    var name : String = ""
+    var password:String = ""
+    var highscores = ["easy": 0,
+    "medium": 0,
+    "hard": 0]
 }
+
