@@ -35,7 +35,7 @@ class GameController: UIViewController {
     
     
     var arrayImageId = [1,1,2,2,3,3,4,4,5,5]
-    var tagArray: [Int] = []
+    var imageArray: [Int] = []
     var count = 0
     
     @IBAction func actionBouton(_ sender: Card) {
@@ -44,37 +44,26 @@ class GameController: UIViewController {
         if(!sender.discovered){
             click(sender: sender)
         }
-        
     }
     
-    func assignTag(tag: [Int]){
-            Bouton1.tag=tag[0]
-            Bouton2.tag=tag[1]
-            Bouton3.tag=tag[2]
-            Bouton4.tag=tag[3]
-            Bouton5.tag=tag[4]
-            Bouton6.tag=tag[5]
-            Bouton7.tag=tag[6]
-            Bouton8.tag=tag[7]
-            Bouton9.tag=tag[8]
-            Bouton10.tag=tag[9]
+    func assignTag(images: [Int]){
+        for i in 0..<buttons.count{
+            print("i == \(i)")
+            buttons[i].image = images[i]
+        }
     }
     
     func assignImage(){
-
         while arrayImageId.count >= 1{
-
             let idx = Int(arc4random_uniform(UInt32(arrayImageId.count)))
-            
-            tagArray += [arrayImageId[idx]]
+            imageArray += [arrayImageId[idx]]
             arrayImageId.remove(at: idx)
         }
-        assignTag(tag: tagArray)
+        assignTag(images: imageArray)
     }
     
     func isWin(cards: [Card]) -> Bool{
         var isWinner = true
-        
         for card in cards {
             if(card.found == false){
                 isWinner = false
@@ -85,14 +74,13 @@ class GameController: UIViewController {
     }
     
     func click(sender: Card){
-       
-        let tagg = String(sender.tag)
+        let image = String(sender.image)
         print("count \(count)")
        if(count <= 1)
        {
         sender.discovered = true
         print("sender.discovered = \(sender.discovered)")
-        sender.setBackgroundImage(UIImage(named: tagg), for: .normal)
+        sender.setBackgroundImage(UIImage(named: image), for: .normal)
         count+=1
         print("count = \(count)")
        }
@@ -116,18 +104,22 @@ class GameController: UIViewController {
          let cardDiscovered1 = cardsDiscovered[0]
          let cardDiscovered2 = cardsDiscovered[1]
              
-         if( cardDiscovered1.tag == cardDiscovered2.tag){
+         if( cardDiscovered1.image == cardDiscovered2.image){
             print("2 image same")
              cardDiscovered1.found = true
              cardDiscovered2.found = true
          }
          else{
             print("else")
-            cardDiscovered1.discovered = false
-            cardDiscovered1.setBackgroundImage(UIImage(named: "0"), for: .normal)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                cardDiscovered1.discovered = false
+                cardDiscovered1.setBackgroundImage(UIImage(named: "0"), for: .normal)
+                
+                cardDiscovered2.discovered = false
+                cardDiscovered2.setBackgroundImage(UIImage(named: "0"), for: .normal)
+            }
+
             
-            cardDiscovered2.discovered = false
-            cardDiscovered2.setBackgroundImage(UIImage(named: "0"), for: .normal)
         }
         count = 0
        }
