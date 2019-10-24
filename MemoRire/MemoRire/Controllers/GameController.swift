@@ -40,7 +40,11 @@ class GameController: UIViewController {
     
     @IBAction func actionBouton(_ sender: Card) {
         print("discovered? \(sender.discovered)")
-        click(sender: sender)
+        
+        if(!sender.discovered){
+            click(sender: sender)
+        }
+        
     }
     
     func assignTag(tag: [Int]){
@@ -103,7 +107,12 @@ class GameController: UIViewController {
                 cardsDiscovered.append(card)
              }
         }
-         print(cardsDiscovered)
+        if cardsDiscovered.count != 2{
+            print(cardsDiscovered)
+        }
+        
+        
+         
          let cardDiscovered1 = cardsDiscovered[0]
          let cardDiscovered2 = cardsDiscovered[1]
              
@@ -111,14 +120,14 @@ class GameController: UIViewController {
             print("2 image same")
              cardDiscovered1.found = true
              cardDiscovered2.found = true
-             
          }
          else{
+            print("else")
             cardDiscovered1.discovered = false
             cardDiscovered1.setBackgroundImage(UIImage(named: "0"), for: .normal)
             
             cardDiscovered2.discovered = false
-            sender.setBackgroundImage(UIImage(named: "0"), for: .normal)
+            cardDiscovered2.setBackgroundImage(UIImage(named: "0"), for: .normal)
         }
         count = 0
        }
