@@ -47,8 +47,9 @@ class GameController: UIViewController {
     var tableauButtons: [UIButton] = [UIButton]()
     //@IBOutlet var buttons: [UIButton]!
     
-    @IBAction func actionBouton1(_ sender: UIButton) {
-          sender.setBackgroundImage(UIImage(named: "1"), for: .normal)
+    @IBAction func actionBouton(_ sender: UIButton) {
+        let tagg = String(sender.tag)
+          sender.setBackgroundImage(UIImage(named: tagg), for: .normal)
         print("yo")
     }
     
@@ -64,43 +65,27 @@ class GameController: UIViewController {
         print("on est dans assign tag")
         print("tag est: \(tag)")
             Bouton1.tag=tag[0]
-        Bouton1.addTarget(self,action:#selector(buttonClicked(sender:)),for:.touchUpInside)
+//        Bouton1.addTarget(self,action:#selector(buttonClicked(sender:)),for:.touchUpInside)
             
         print("bouton1.tag est \(Bouton1.tag)")
         
             Bouton2.tag=tag[1]
-            Bouton2.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-        
+
             Bouton3.tag=tag[2]
-            Bouton3.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-          
-        
+         
             Bouton4.tag=tag[3]
-            Bouton4.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-           
-        
+                 
             Bouton5.tag=tag[4]
-            Bouton5.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-            
         
             Bouton6.tag=tag[5]
-            Bouton6.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-           
         
             Bouton7.tag=tag[6]
-            Bouton7.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-            
         
             Bouton8.tag=tag[7]
-            Bouton8.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-         
-        
+          
             Bouton9.tag=tag[8]
-            Bouton9.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
         
             Bouton10.tag=tag[9]
-            Bouton10.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
- 
     }
 
     
