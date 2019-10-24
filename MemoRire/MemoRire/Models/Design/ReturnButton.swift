@@ -11,6 +11,9 @@ import UIKit
 class ReturnButton: UIButton {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setTitleColor(.red, for: .normal)
+        tintColor = .lightText
+        frame.size = CGSize(width: 61, height: 53)
+//        setBackgroundImage(UIImage(named: "arrow.left.circle"), for: .normal)
+        setTitle("", for: .normal)
     }
 }

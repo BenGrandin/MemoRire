@@ -30,6 +30,9 @@ class GameController: UIViewController {
     @IBOutlet weak var Bouton8: Card!
     @IBOutlet weak var Bouton9: Card!
     @IBOutlet weak var Bouton10: Card!
+    @IBAction func ReturnButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     var buttons: [Card] = [Card]()
     
