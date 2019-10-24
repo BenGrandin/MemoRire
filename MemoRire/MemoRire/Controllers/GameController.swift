@@ -38,7 +38,14 @@ class GameController: UIViewController {
     @IBOutlet weak var Bouton9:
     UIButton!
     
-    @IBOutlet weak var Bouton10: UIButton!
+    @IBOutlet weak var Bouton10:
+    UIButton!
+    
+    var arrayImageId = [1,1,2,2,3,3,4,4,5,5]
+    var tagArray: [Int] = []
+    
+    var tableauButtons: [UIButton] = [UIButton]()
+    //@IBOutlet var buttons: [UIButton]!
     
     @IBAction func actionBouton1(_ sender: UIButton) {
           sender.setBackgroundImage(UIImage(named: "1"), for: .normal)
@@ -46,81 +53,125 @@ class GameController: UIViewController {
     }
     
     
-    @IBAction func myImageButton(_ sender: UIButton, tag: String) {
-        sender.setBackgroundImage(UIImage(named: tag), for: .normal)
+    @IBAction func myImageButton(_ sender: UIButton, tag: Int) {
+        let tagg: String = String(tag)
+        
+        sender.setBackgroundImage(UIImage(named: tagg), for: .normal)
         print("yoyo")
     }
     
-    func assignTag(){
-            Bouton1.tag=1
-        Bouton1.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+    func assignTag(tag: [Int]){
+        print("on est dans assign tag")
+        print("tag est: \(tag)")
+            Bouton1.tag=tag[0]
+        Bouton1.addTarget(self,action:#selector(buttonClicked(sender:)),for:.touchUpInside)
             
-            Bouton2.tag=2
-        Bouton2.addTarget(self,action:#selector(buttonClicked),
-                                  for:.touchUpInside)
-            Bouton3.tag=3
-        Bouton3.addTarget(self,action:#selector(buttonClicked),
-                                  for:.touchUpInside)
+        print("bouton1.tag est \(Bouton1.tag)")
         
-            Bouton4.tag=4
+            Bouton2.tag=tag[1]
+            Bouton2.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+        
+            Bouton3.tag=tag[2]
+            Bouton3.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+          
+        
+            Bouton4.tag=tag[3]
             Bouton4.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+           
         
-            Bouton5.tag=5
+            Bouton5.tag=tag[4]
             Bouton5.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+            
         
-            Bouton6.tag=6
+            Bouton6.tag=tag[5]
             Bouton6.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+           
         
-            Bouton7.tag=7
-            Bouton1.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+            Bouton7.tag=tag[6]
+            Bouton7.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+            
         
-            Bouton8.tag=8
-        Bouton8.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+            Bouton8.tag=tag[7]
+            Bouton8.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
+         
         
-            Bouton9.tag=9
+            Bouton9.tag=tag[8]
             Bouton9.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
         
-            Bouton10.tag=10
+            Bouton10.tag=tag[9]
             Bouton10.addTarget(self,action:#selector(buttonClicked),for:.touchUpInside)
-            
-        
+ 
     }
+
     
-//    func assignImage(){
-//        let arrayImageId = ["1","1","2","2","3","3","4","4","5","5"]
-//        print("arrayImageId " + arrayImageId[2])
-//
-//        while (arrayImageId.count) >1{
-//
-//        }
-//    }
+    func assignImage(){
+        
+        print("on est dans assign image")
+
+        while arrayImageId.count >= 1{
+            print(arrayImageId)
+            
+            let idx = Int(arc4random_uniform(UInt32(arrayImageId.count)))
+            
+            print(arrayImageId[idx])
+            
+            tagArray += [arrayImageId[idx]]
+            
+            
+            arrayImageId.remove(at: idx)
+        }
+        assignTag(tag: tagArray)
+     
+    }
     
     @objc func buttonClicked(sender:UIButton)
     {
+        print("on est dans buttonclicked")
         switch sender.tag
         {
             case 1: print("1")     //when Button1 is clicked...
-            myImageButton(sender, tag:"1")
+            myImageButton(sender, tag:1)
                 break
             case 2: print("2")     //when Button2 is clicked...
-            myImageButton(sender, tag:"2")
+            myImageButton(sender, tag:2)
                 break
             case 3: print("3")     //when Button3 is clicked...
-            myImageButton(sender, tag:"3")
+            myImageButton(sender, tag:3)
                 break
+            case 4: print("4")     //when Button1 is clicked...
+            myImageButton(sender, tag:4)
+                break
+            case 5: print("5")     //when Button1 is clicked...
+            myImageButton(sender, tag:5)
+                break
+            case 6: print("6")     //when Button1 is clicked...
+            myImageButton(sender, tag:6)
+                break
+            case 7: print("7")     //when Button1 is clicked...
+            myImageButton(sender, tag:7)
+                break
+            case 8: print("8")     //when Button1 is clicked...
+            myImageButton(sender, tag:8)
+                break
+            case 9: print("9")     //when Button1 is clicked...
+            myImageButton(sender, tag:9)
+                break
+            case 10: print("10")     //when Button1 is clicked...
+            myImageButton(sender, tag:10)
+                break
+            
             default: print("Other...")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        assignTag()
-        //assignImage()
-        
+       // assignTag()
+        assignImage()
         
         
-        //myImageButton(Bouton1)
+        
+        // myImageButton(Bouton1)
         
         // Do any additional setup after loading the view.
     }
