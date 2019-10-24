@@ -36,11 +36,11 @@ class GameController: UIViewController {
     
     var arrayImageId = [1,1,2,2,3,3,4,4,5,5]
     var tagArray: [Int] = []
+    var count = 0
     
     @IBAction func actionBouton(_ sender: Card) {
         print("discovered? \(sender.discovered)")
-        let tagg = String(sender.tag)
-        sender.setBackgroundImage(UIImage(named: tagg), for: .normal)
+        click(sender: sender)
     }
     
     func assignTag(tag: [Int]){
@@ -80,12 +80,62 @@ class GameController: UIViewController {
         return isWinner
     }
     
-    
+    func click(sender: Card){
+       
+        let tagg = String(sender.tag)
+        print("count \(count)")
+       if(count <= 1)
+       {
+        sender.discovered = true
+        print("sender.discovered = \(sender.discovered)")
+        sender.setBackgroundImage(UIImage(named: tagg), for: .normal)
+        count+=1
+        print("count = \(count)")
+       }
+       
+       if(count == 2){
+        
+        var cardsDiscovered: Array<Card> = Array()
+        
+        for card in buttons{
+            if(card.discovered && !card.found){
+                print("card disco true et notfound")
+                cardsDiscovered.append(card)
+             }
+        }
+         print(cardsDiscovered)
+         let cardDiscovered1 = cardsDiscovered[0]
+         let cardDiscovered2 = cardsDiscovered[1]
+             
+         if( cardDiscovered1.tag == cardDiscovered2.tag){
+            print("2 image same")
+             cardDiscovered1.found = true
+             cardDiscovered2.found = true
+             
+         }
+         else{
+            cardDiscovered1.discovered = false
+            cardDiscovered1.setBackgroundImage(UIImage(named: "0"), for: .normal)
+            
+            cardDiscovered2.discovered = false
+            sender.setBackgroundImage(UIImage(named: "0"), for: .normal)
+        }
+        count = 0
+       }
+        
+        if(isWin(cards: buttons)){
+            print("Win ---")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         buttons = [Bouton1, Bouton2, Bouton3, Bouton4, Bouton5, Bouton6, Bouton7, Bouton8, Bouton9, Bouton10]
+        
+        for bouton in buttons{
+            bouton.setBackgroundImage(UIImage(named: "0"), for: .normal)
+        }
         
         assignImage()
     }
