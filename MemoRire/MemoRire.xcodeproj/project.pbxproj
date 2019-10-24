@@ -170,6 +170,8 @@
 			children = (
 				DB3BEB9F235F4A8200A755F8 /* Title.swift */,
 				DB46DDC32360488A00F1E05D /* RoundedButton.swift */,
+				6795360323608604007B2292 /* TitleLabel.swift */,
+				679536052360A1AA007B2292 /* ReturnButton.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -338,9 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3BEBA0235F4A8200A755F8 /* Title.swift in Sources */,
+				679536062360A1AA007B2292 /* ReturnButton.swift in Sources */,
 				DB3BEB71235F4A5000A755F8 /* ViewController.swift in Sources */,
 				DB46DDC42360488A00F1E05D /* RoundedButton.swift in Sources */,
 				DB3BEBAE235F57A300A755F8 /* Variables.swift in Sources */,
+				6795360423608604007B2292 /* TitleLabel.swift in Sources */,
 				DB3BEBA6235F4ACF00A755F8 /* Game.swift in Sources */,
 				6E994450236056CC00C42C43 /* GameCollectionViewController.swift in Sources */,
 				DB3BEBA4235F4AA200A755F8 /* Highscore.swift in Sources */,

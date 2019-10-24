@@ -8,13 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewControllerHomepage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+}
 
-
+class ViewControllerDifficulty: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func actionBtnReturn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

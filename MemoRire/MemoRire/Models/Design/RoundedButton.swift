@@ -19,6 +19,7 @@ class RoundedButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 26.0)
         setTitle(title(for: .normal)?.uppercased(), for: .normal)
         frame.size = CGSize(width: 132, height: 45)
+        contentHorizontalAlignment.self = .center
         //        UIFont.systemFont(ofSize: 26.0)
         //        setTitle("OK", for: .normal)
     }
