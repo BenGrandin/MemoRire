@@ -8,6 +8,8 @@
 
 import UIKit
 
-class Card: NSObject {
-
+class Card: UIButton {
+    var discovered = false
+    var found = false
+    var image = 0
 }
