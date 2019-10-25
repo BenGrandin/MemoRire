@@ -11,7 +11,7 @@ import UIKit
 class Variables: NSObject {
     
     static var highscore: [String:Player] =
-        ["easy": Player(),
-        "medium": Player(),
-        "hard": Player()]
+        ["easy": Player(name:"toto",password: "1"),
+        "medium": Player(name:"toto",password: "1"),
+        "hard": Player(name:"toto",password: "1")]
 }

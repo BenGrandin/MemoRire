@@ -18,6 +18,53 @@
             endingLineNumber = "12"
             landmarkName = "Player"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AFA30881-244C-4054-9E4C-1A08428F6F74 - a1c9f4ca5dbfbb5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemoRire.Player.__allocating_init() -&gt; MemoRire.Player"
+                  moduleName = "MemoRire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grandinbenjamin/Documents/Coding%20Factory/Swift/MemoRire/MemoRire/MemoRire/Models/Player.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "AFA30881-244C-4054-9E4C-1A08428F6F74 - a0fbab43cf4ac6e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemoRire.Player.init() -&gt; MemoRire.Player"
+                  moduleName = "MemoRire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grandinbenjamin/Documents/Coding%20Factory/Swift/MemoRire/MemoRire/MemoRire/Models/Player.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "AFA30881-244C-4054-9E4C-1A08428F6F74 - c3e18d3e782be4f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemoRire.Player.__deallocating_deinit"
+                  moduleName = "MemoRire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grandinbenjamin/Documents/Coding%20Factory/Swift/MemoRire/MemoRire/MemoRire/Models/Player.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
