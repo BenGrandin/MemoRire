@@ -10,6 +10,7 @@
 		679CC5C62361F77700B6F14C /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CC5C42361F77600B6F14C /* TitleLabel.swift */; };
 		679CC5C72361F77700B6F14C /* ReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CC5C52361F77700B6F14C /* ReturnButton.swift */; };
 		6E0EFDD42361AF0400371411 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0EFDD32361AF0400371411 /* GameController.swift */; };
+		6E7284562362DFFE00D68FDE /* MediumGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7284552362DFFE00D68FDE /* MediumGameController.swift */; };
 		6E994450236056CC00C42C43 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */; };
 		6E9944542360735000C42C43 /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9944532360735000C42C43 /* myCell.swift */; };
 		DB3BEB6D235F4A5000A755F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3BEB6C235F4A5000A755F8 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		679CC5C42361F77600B6F14C /* TitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		679CC5C52361F77700B6F14C /* ReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnButton.swift; sourceTree = "<group>"; };
 		6E0EFDD32361AF0400371411 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		6E7284552362DFFE00D68FDE /* MediumGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGameController.swift; sourceTree = "<group>"; };
 		6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
 		6E9944532360735000C42C43 /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myCell.swift; path = ../../myCell.swift; sourceTree = "<group>"; };
 		DB3BEB69235F4A5000A755F8 /* MemoRire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoRire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				6E9944532360735000C42C43 /* myCell.swift */,
 				6E99444F236056CC00C42C43 /* GameCollectionViewController.swift */,
 				6E0EFDD32361AF0400371411 /* GameController.swift */,
+				6E7284552362DFFE00D68FDE /* MediumGameController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				DB3BEB71235F4A5000A755F8 /* ViewController.swift in Sources */,
 				DB46DDC42360488A00F1E05D /* RoundedButton.swift in Sources */,
 				DB3BEBAE235F57A300A755F8 /* Variables.swift in Sources */,
+				6E7284562362DFFE00D68FDE /* MediumGameController.swift in Sources */,
 				DB3BEBA6235F4ACF00A755F8 /* Game.swift in Sources */,
 				6E994450236056CC00C42C43 /* GameCollectionViewController.swift in Sources */,
 				DB3BEBA4235F4AA200A755F8 /* Highscore.swift in Sources */,
